@@ -38,4 +38,4 @@ ros2 launch hornet_front_camera rectify.launch.py \
   right_yaml:="$HOME/hornet_calibration/front_run_01/right.yaml"
 ```
 
-The camera driver must publish separately. A 320×240 per-lens calibration requires 640×240 combined input; do not resize a different capture mode to conceal mismatched geometry. Depth and detector consumers load the same calibration ID. Coordinate raw/rectified camera mounting TF with the localization component. See [setup](../docs/setup.md), [interfaces](../docs/interfaces.md), and [frames](../docs/frames.md).
+The camera driver must publish separately. A 320×240 per-lens calibration requires 640×240 combined input; do not resize a different capture mode to conceal mismatched geometry. Depth and detector consumers load the same calibration ID. Coordinate raw/rectified camera mounting TF with the localization component. See [interfaces](../docs/interfaces.md) and [frames](../docs/frames.md).

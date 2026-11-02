@@ -37,4 +37,4 @@ ros2 launch hornet_bottom_camera rectify.launch.py \
   bottom_yaml:="$HOME/hornet_calibration/bottom_run_01/bottom.yaml"
 ```
 
-Run the capture driver separately and match the saved image dimensions. Agree timestamps and measured camera extrinsics with localization. A single color camera does not provide metric depth by itself; bottom object localization and metric flow require a known plane or altitude/scale source. See [setup](../docs/setup.md), [interfaces](../docs/interfaces.md), and [frames](../docs/frames.md).
+Run the capture driver separately and match the saved image dimensions. Agree timestamps and measured camera extrinsics with localization. A single color camera does not provide metric depth by itself; bottom object localization and metric flow require a known plane or altitude/scale source. See [interfaces](../docs/interfaces.md) and [frames](../docs/frames.md).

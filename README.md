@@ -59,7 +59,7 @@ Each stereo observation contains the class, source, calibration ID, physical-ins
 
 ## Integration and simulation
 
-Coordinate component interfaces using [the integration checklist](docs/validation.md). Simulation scenarios can validate image timing, camera geometry, source handover, robot localization and map-coordinate object positions. Simulation tooling belongs to the team's chosen simulator integration.
+Coordinate component interfaces using [topic contracts](docs/interfaces.md) and [frame conventions](docs/frames.md). Simulation scenarios can validate image timing, camera geometry, source handover, robot localization and map-coordinate object positions. Simulation tooling belongs to the team's chosen simulator integration.
 
 ## Storage and contribution rules
 
