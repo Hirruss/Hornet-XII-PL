@@ -1,0 +1,9 @@
+/**:
+  ros__parameters:
+    mode: front_stereo
+    input_topic: /front/image_raw
+    left_topic: /front/left/image_rect
+    right_topic: /front/right/image_rect
+    bottom_topic: /bottom/image_rect
+    swap_input_halves: false
+    allow_example_calibration: false

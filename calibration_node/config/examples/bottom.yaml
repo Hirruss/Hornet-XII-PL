@@ -1,0 +1,60 @@
+# SYNTHETIC geometry for tests and documentation ONLY. Not measured vehicle calibration.
+image_width: 320
+image_height: 240
+distortion_model: plumb_bob
+camera_matrix:
+  rows: 3
+  cols: 3
+  data:
+  - 240.0
+  - 0.0
+  - 160.0
+  - 0.0
+  - 250.0
+  - 120.0
+  - 0.0
+  - 0.0
+  - 1.0
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data:
+  - 1.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+projection_matrix:
+  rows: 3
+  cols: 4
+  data:
+  - 240.0
+  - 0.0
+  - 160.0
+  - 0.0
+  - 0.0
+  - 250.0
+  - 120.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  - 0.0
+units: metres
+is_example: true
+calibration_id: SYNTHETIC-BOTTOM-EXAMPLE-DO-NOT-DEPLOY
+camera_name: bottom
+rectified_frame_id: bottom_rect_optical_frame

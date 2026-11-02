@@ -1,0 +1,26 @@
+# Generated ROS/Python outputs
+build/
+install/
+log/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+# Runtime recordings, captures, datasets, and model weights
+bags/
+datasets/
+calibration_images/
+weights/
+*.db3
+*.mcap
+*.bag
+*.mp4
+*.onnx
+*.pt
+*.engine
+*.plan
+# Machine-local secrets/configuration
+.env
+.env.*
+local_config/

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1250" viewBox="0 0 2000 1250">
+<title>Hornet XII Perception and Localization framework</title>
+<rect width="100%" height="100%" fill="#f6f8fc"/>
+<text x="50" y="67" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="42" font-weight="700" fill="#18304b">HORNET XII  /  PERCEPTION &amp; LOCALIZATION</text>
+<text x="50" y="111" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="23" font-weight="400" fill="#526880">Green: implemented    Purple: work to assign    Blue: outputs    Dashed: YAML reads / feedback</text>
+<text x="50" y="203" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="23" font-weight="700" fill="#526880">FRONT STEREO</text>
+<rect x="50" y="270" width="230" height="110" rx="18" fill="#ece9f8" stroke="#aebed0" stroke-width="2"/>
+<text x="165.0" y="314" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Front camera</text>
+<text x="165.0" y="349" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Driver integration</text>
+<rect x="340" y="270" width="250" height="110" rx="18" fill="#d8f3ed" stroke="#aebed0" stroke-width="2"/>
+<text x="465.0" y="314" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Calibration</text>
+<text x="465.0" y="349" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Split + rectify</text>
+<rect x="730" y="210" width="270" height="110" rx="18" fill="#ece9f8" stroke="#aebed0" stroke-width="2"/>
+<text x="865.0" y="254" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Object detection</text>
+<text x="865.0" y="289" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Stereo centers / class</text>
+<rect x="730" y="390" width="270" height="110" rx="18" fill="#ece9f8" stroke="#aebed0" stroke-width="2"/>
+<text x="865.0" y="434" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Color thresholding</text>
+<text x="865.0" y="469" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Stereo centers / class</text>
+<rect x="1150" y="300" width="300" height="130" rx="18" fill="#d8f3ed" stroke="#aebed0" stroke-width="2"/>
+<text x="1300.0" y="344" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Depth estimation</text>
+<text x="1300.0" y="379" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Triangulate + select</text>
+<text x="1300.0" y="408" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Transform into map</text>
+<rect x="1630" y="300" width="310" height="130" rx="18" fill="#dceafd" stroke="#aebed0" stroke-width="2"/>
+<text x="1785.0" y="344" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Object positions</text>
+<text x="1785.0" y="379" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Per class + instance</text>
+<text x="1785.0" y="408" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">XYZ in fixed map</text>
+<rect x="340" y="500" width="250" height="100" rx="18" fill="#fff3ce" stroke="#aebed0" stroke-width="2"/>
+<text x="465.0" y="544" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Stereo YAML</text>
+<text x="465.0" y="579" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Saved before runtime</text>
+<polyline points="280,325 340,325" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="340,325 327.39374056706254,331.08951747755725 327.39374056706254,318.91048252244275" fill="#536c88"/>
+<text x="285" y="305" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">raw</text>
+<polyline points="590,325 655,325 655,265 730,265" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="730,265 717.3937405670625,271.08951747755725 717.3937405670625,258.91048252244275" fill="#536c88"/>
+<polyline points="655,325 655,445 730,445" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="730,445 717.3937405670625,451.08951747755725 717.3937405670625,438.91048252244275" fill="#536c88"/>
+<text x="595" y="230" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Left / right</text>
+<text x="595" y="259" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">rectified</text>
+<polyline points="1000,265 1080,265 1080,345 1150,345" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="1150,345 1137.3937405670624,351.08951747755725 1137.3937405670624,338.91048252244275" fill="#536c88"/>
+<polyline points="1000,445 1080,445 1080,390 1150,390" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="1150,390 1137.3937405670624,396.08951747755725 1137.3937405670624,383.91048252244275" fill="#536c88"/>
+<text x="1008" y="495" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Per-class</text>
+<text x="1008" y="524" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">observations</text>
+<polyline points="1450,365 1630,365" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="1630,365 1617.3937405670624,371.08951747755725 1617.3937405670624,358.91048252244275" fill="#536c88"/>
+<polyline points="465,500 465,380" fill="none" stroke="#b56b05" stroke-width="3" stroke-dasharray="9 7"/>
+<polygon points="465,380 471.08951747755725,392.60625943293746 458.91048252244275,392.60625943293746" fill="#b56b05"/>
+<polyline points="590,550 1220,550 1220,430" fill="none" stroke="#b56b05" stroke-width="3" stroke-dasharray="9 7"/>
+<polygon points="1220,430 1226.0895174775571,442.60625943293746 1213.9104825224429,442.60625943293746" fill="#b56b05"/>
+<text x="705" y="576" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="21" font-weight="400" fill="#b56b05">Read geometry once</text>
+<polyline points="1300,300 1300,155 865,155 865,210" fill="none" stroke="#b56b05" stroke-width="3" stroke-dasharray="9 7"/>
+<polygon points="865,210 858.9104825224427,197.39374056706254 871.0895174775573,197.39374056706254" fill="#b56b05"/>
+<polyline points="865,155 695,155 695,445 730,445" fill="none" stroke="#b56b05" stroke-width="3" stroke-dasharray="9 7"/>
+<polygon points="730,445 717.3937405670625,451.08951747755725 717.3937405670625,438.91048252244275" fill="#b56b05"/>
+<text x="900" y="141" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="21" font-weight="400" fill="#b56b05">Range + uncertainty / source feedback</text>
+<text x="50" y="758" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="23" font-weight="700" fill="#526880">BOTTOM VISION + LOCALIZATION</text>
+<rect x="50" y="840" width="230" height="110" rx="18" fill="#ece9f8" stroke="#aebed0" stroke-width="2"/>
+<text x="165.0" y="884" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Bottom camera</text>
+<text x="165.0" y="919" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Driver integration</text>
+<rect x="340" y="840" width="250" height="110" rx="18" fill="#d8f3ed" stroke="#aebed0" stroke-width="2"/>
+<text x="465.0" y="884" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Calibration</text>
+<text x="465.0" y="919" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Mono rectify</text>
+<rect x="730" y="750" width="270" height="110" rx="18" fill="#ece9f8" stroke="#aebed0" stroke-width="2"/>
+<text x="865.0" y="794" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Optical flow</text>
+<text x="865.0" y="829" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Metric motion + scale</text>
+<rect x="730" y="1020" width="270" height="120" rx="18" fill="#ece9f8" stroke="#aebed0" stroke-width="2"/>
+<text x="865.0" y="1064" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Bottom color</text>
+<text x="865.0" y="1099" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Objects on known plane</text>
+<rect x="730" y="595" width="270" height="100" rx="18" fill="#ece9f8" stroke="#aebed0" stroke-width="2"/>
+<text x="865.0" y="639" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">IMU + depth</text>
+<text x="865.0" y="674" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Sensor integration</text>
+<rect x="1150" y="780" width="300" height="130" rx="18" fill="#ece9f8" stroke="#aebed0" stroke-width="2"/>
+<text x="1300.0" y="824" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">EKF / localization</text>
+<text x="1300.0" y="859" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Pose + covariance</text>
+<text x="1300.0" y="888" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Map / TF authority</text>
+<rect x="1630" y="780" width="310" height="130" rx="18" fill="#dceafd" stroke="#aebed0" stroke-width="2"/>
+<text x="1785.0" y="824" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Robot localization</text>
+<text x="1785.0" y="859" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Pose in fixed map</text>
+<rect x="1630" y="1020" width="310" height="120" rx="18" fill="#dceafd" stroke="#aebed0" stroke-width="2"/>
+<text x="1785.0" y="1064" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Bottom objects</text>
+<text x="1785.0" y="1099" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Positions in map</text>
+<rect x="340" y="1050" width="250" height="100" rx="18" fill="#fff3ce" stroke="#aebed0" stroke-width="2"/>
+<text x="465.0" y="1094" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#18304b">Bottom YAML</text>
+<text x="465.0" y="1129" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Saved before runtime</text>
+<polyline points="280,895 340,895" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="340,895 327.39374056706254,901.0895174775573 327.39374056706254,888.9104825224427" fill="#536c88"/>
+<polyline points="590,895 655,895 655,805 730,805" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="730,805 717.3937405670625,811.0895174775573 717.3937405670625,798.9104825224427" fill="#536c88"/>
+<polyline points="655,895 655,1080 730,1080" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="730,1080 717.3937405670625,1086.0895174775571 717.3937405670625,1073.9104825224429" fill="#536c88"/>
+<polyline points="465,1050 465,950" fill="none" stroke="#b56b05" stroke-width="3" stroke-dasharray="9 7"/>
+<polygon points="465,950 471.08951747755725,962.6062594329375 458.91048252244275,962.6062594329375" fill="#b56b05"/>
+<polyline points="1000,805 1150,805" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="1150,805 1137.3937405670624,811.0895174775573 1137.3937405670624,798.9104825224427" fill="#536c88"/>
+<polyline points="1000,645 1060,645 1060,860 1150,860" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="1150,860 1137.3937405670624,866.0895174775573 1137.3937405670624,853.9104825224427" fill="#536c88"/>
+<polyline points="1450,845 1630,845" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="1630,845 1617.3937405670624,851.0895174775573 1617.3937405670624,838.9104825224427" fill="#536c88"/>
+<polyline points="1000,1080 1630,1080" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="1630,1080 1617.3937405670624,1086.0895174775571 1617.3937405670624,1073.9104825224429" fill="#536c88"/>
+<polyline points="1300,780 1300,665 1520,665 1520,480 1380,480 1380,430" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="1380,430 1386.0895174775571,442.60625943293746 1373.9104825224429,442.60625943293746" fill="#536c88"/>
+<text x="1535" y="581" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="21" font-weight="400" fill="#526880">TF at image time</text>
+<text x="1535" y="611" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="21" font-weight="400" fill="#526880">+ camera extrinsics</text>
+<polyline points="1225,910 1225,975 865,975 865,1020" fill="none" stroke="#536c88" stroke-width="3"/>
+<polygon points="865,1020 858.9104825224427,1007.3937405670625 871.0895174775573,1007.3937405670625" fill="#536c88"/>
+<text x="900" y="955" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#526880">Pose + known plane / altitude</text>
+<text x="50" y="1212" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="22" font-weight="400" fill="#526880">Map coordinates do not remove pose drift. Calibration YAMLs shipped here are synthetic examples, blocked by default.</text>
+</svg>

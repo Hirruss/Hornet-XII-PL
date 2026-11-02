@@ -1,0 +1,21 @@
+flowchart LR
+    front[Front camera driver: planned] -->|side-by-side raw Image| frontcal[Calibration: front instance, implemented]
+    yaml[(Measured calibration YAML)] -. read once .-> frontcal
+    yaml -. read once .-> depth
+    frontcal -->|left and right rectified Image| ml[Object detection: planned]
+    frontcal -->|left and right rectified Image| hsv[Front color thresholding: planned]
+    ml -->|per-class StereoObservation| depth[Depth estimation and source selection: implemented]
+    hsv -->|per-class StereoObservation| depth
+    depth -->|per-class map ObjectPosition| objects[Object positions in map]
+    depth -. uncertainty and selected-source feedback .-> ml
+    depth -. uncertainty and selected-source feedback .-> hsv
+    bottom[Bottom camera driver: planned] --> bottomcal[Calibration: bottom instance, implemented]
+    bottomyaml[(Measured bottom YAML)] -. read once .-> bottomcal
+    bottomcal --> flow[Optical flow: planned]
+    bottomcal --> bottomhsv[Bottom color localization: planned]
+    sensors[IMU and pressure depth: planned bridge] --> ekf[EKF / localization and mapping: planned]
+    flow -->|metric motion with scale and covariance| ekf
+    ekf --> pose[Robot localization in map]
+    ekf -->|timestamped camera TF| depth
+    ekf -->|pose plus known plane or altitude required| bottomhsv
+    bottomhsv --> bottomobjects[Bottom object positions in map]

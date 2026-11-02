@@ -1,0 +1,18 @@
+depth_estimation_node:
+  ros__parameters:
+    map_frame: map
+    object_types: [gate, yellow_flare, orange_flare, blue_flare, red_flare, blue_drum, red_drum]
+    enter_color_m: 2.0
+    exit_color_m: 2.5
+    max_position_stddev_m: 0.5
+    min_confidence: 0.25
+    max_observation_age_sec: 0.5
+    max_source_skew_sec: 0.15
+    future_tolerance_sec: 0.05
+    track_ttl_sec: 2.0
+    max_tracks: 256
+    min_range_m: 0.2
+    max_range_m: 15.0
+    min_disparity_px: 0.5
+    max_reprojection_px: 2.0
+    allow_example_calibration: false
