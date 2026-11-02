@@ -18,7 +18,7 @@ Inspired by the modular camera architecture in [Hornet 9](https://github.com/hor
 4. The bottom camera has a separate instance of the same calibration node. Its rectified image feeds optical flow and bottom color thresholding.
 5. The localization owner fuses IMU/depth and metric optical-flow information, maintains the pose/TF chain, and defines the map origin. Bottom object positions additionally require a known plane or altitude and correct camera geometry.
 
-Dashed arrows in the diagram represent configuration reads or feedback. Focal length and stereo baseline are saved in YAML and read once by consumers; there are **no continuously published focal-length/baseline topics**. “Calibration” in the runtime graph means applying saved calibration. A separate offline tool estimates it before deployment.
+Diagram colors identify roles (nodes, outputs, and saved configuration), independently of implementation progress. Dashed arrows represent configuration reads or feedback. Focal length and stereo baseline are saved in YAML and read once by consumers; there are **no continuously published focal-length/baseline topics**. “Calibration” in the runtime graph means applying saved calibration. A separate offline tool estimates it before deployment.
 
 **Map coordinates are metric coordinates in a fixed frame, not camera-relative XYZ and not values scaled to 0–1.** Expressing a point in `map` does not remove localization drift or calibration error. The current covariance describes pixel-induced stereo uncertainty conditional on exact robot pose/calibration; it is not a ground-truth error bound.
 

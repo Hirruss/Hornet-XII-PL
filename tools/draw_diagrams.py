@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 OUT = Path(__file__).resolve().parents[1] / 'docs/images'
 COLORS = {'ink': '#18304b', 'muted': '#526880', 'background': '#f6f8fc',
-          'implemented': '#d8f3ed', 'planned': '#ece9f8', 'output': '#dceafd',
+          'node': '#ece9f8', 'output': '#dceafd',
           'config': '#fff3ce', 'feedback': '#b56b05', 'line': '#536c88'}
 
 
@@ -39,7 +39,7 @@ class Diagram:
             width = self.draw.textlength(text, font=font)
             self.draw.text((x-width/2 if anchor == 'center' else x, cy), text, font=font, fill=COLORS[color])
 
-    def box(self, x, y, width, height, title, subtitle, kind='planned'):
+    def box(self, x, y, width, height, title, subtitle, kind='node'):
         fill = COLORS[kind]
         self.svg.append(f'<rect x="{x}" y="{y}" width="{width}" height="{height}" rx="18" fill="{fill}" stroke="#aebed0" stroke-width="2"/>')
         self.draw.rounded_rectangle((x, y, x+width, y+height), radius=18, fill=fill, outline='#aebed0', width=2)
@@ -76,13 +76,13 @@ class Diagram:
 def framework():
     d=Diagram(2000,1250)
     d.text(50,25,'HORNET XII  /  PERCEPTION & LOCALIZATION',42,True)
-    d.text(50,88,'Green: implemented    Purple: work to assign    Blue: outputs    Dashed: YAML reads / feedback',23,color='muted')
+    d.text(50,88,'Purple: processing nodes    Blue: outputs    Yellow: saved configuration    Dashed: YAML reads / feedback',23,color='muted')
     d.text(50,180,'FRONT STEREO',23,True,color='muted')
-    d.box(50,270,230,110,'Front camera',['Driver integration'])
-    d.box(340,270,250,110,'Calibration',['Split + rectify'],'implemented')
+    d.box(50,270,230,110,'Front camera',['Side-by-side stereo'])
+    d.box(340,270,250,110,'Calibration',['Split + rectify'])
     d.box(730,210,270,110,'Object detection',['Stereo centers / class'])
     d.box(730,390,270,110,'Color thresholding',['Stereo centers / class'])
-    d.box(1150,300,300,130,'Depth estimation',['Triangulate + select','Transform into map'],'implemented')
+    d.box(1150,300,300,130,'Depth estimation',['Triangulate + select','Transform into map'])
     d.box(1630,300,310,130,'Object positions',['Per class + instance','XYZ in fixed map'],'output')
     d.box(340,500,250,100,'Stereo YAML',['Saved before runtime'],'config')
     d.arrow([(280,325),(340,325)])
@@ -101,11 +101,11 @@ def framework():
     d.arrow([(865,155),(695,155),(695,445),(730,445)],color='feedback',dashed=True)
     d.text(900,120,'Range + uncertainty / source feedback',21,color='feedback')
     d.text(50,735,'BOTTOM VISION + LOCALIZATION',23,True,color='muted')
-    d.box(50,840,230,110,'Bottom camera',['Driver integration'])
-    d.box(340,840,250,110,'Calibration',['Mono rectify'],'implemented')
+    d.box(50,840,230,110,'Bottom camera',['Monocular images'])
+    d.box(340,840,250,110,'Calibration',['Mono rectify'])
     d.box(730,750,270,110,'Optical flow',['Metric motion + scale'])
-    d.box(730,1020,270,120,'Bottom color',['Objects on known plane'])
-    d.box(730,595,270,100,'IMU + depth',['Sensor integration'])
+    d.box(730,1020,270,120,'Color thresholding',['Objects on known plane'])
+    d.box(730,595,270,100,'IMU + depth',['Time-aligned sensors'])
     d.box(1150,780,300,130,'EKF / localization',['Pose + covariance','Map / TF authority'])
     d.box(1630,780,310,130,'Robot localization',['Pose in fixed map'],'output')
     d.box(1630,1020,310,120,'Bottom objects',['Positions in map'],'output')
@@ -122,7 +122,7 @@ def framework():
     d.text(1535,560,['TF at image time','+ camera extrinsics'],21,color='muted')
     d.arrow([(1225,910),(1225,975),(865,975),(865,1020)])
     d.text(900,935,'Pose + known plane / altitude',20,color='muted')
-    d.text(50,1190,'Map coordinates do not remove pose drift. Calibration YAMLs shipped here are synthetic examples, blocked by default.',22,color='muted')
+    d.text(50,1190,'Map positions use metres and require timestamped localization, measured camera geometry, and correct extrinsics.',22,color='muted')
     d.save('framework')
 
 
@@ -131,14 +131,14 @@ def overview():
     d.text(50,30,'HORNET XII PL  /  SYSTEM BOUNDARY',38,True)
     d.box(50,160,250,100,'Cameras',['Front stereo + bottom'])
     d.box(50,350,250,100,'IMU + depth',['Time-aligned sensors'])
-    d.box(470,230,360,150,'Perception &',['Localization'],'implemented')
+    d.box(470,230,360,150,'Perception &',['Localization'])
     d.box(1010,160,290,100,'Object positions',['Metric map coordinates'],'output')
     d.box(1010,350,290,100,'Robot localization',['Pose + uncertainty'],'output')
     d.arrow([(300,210),(390,210),(390,270),(470,270)])
     d.arrow([(300,400),(390,400),(390,340),(470,340)])
     d.arrow([(830,270),(920,270),(920,210),(1010,210)])
     d.arrow([(830,340),(920,340),(920,400),(1010,400)])
-    d.text(50,540,'Implementation scope: calibration / rectification + sparse stereo depth. Other node roles are assignment scaffolds.',22,color='muted')
+    d.text(50,540,'Cameras, IMU and depth feed perception and localization; object positions and robot pose share a fixed map frame.',22,color='muted')
     d.save('system-overview')
 
 
