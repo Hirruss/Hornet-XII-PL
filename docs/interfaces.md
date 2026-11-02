@@ -62,4 +62,4 @@ Both detector owners should consume this feedback to prioritize work, but retain
 | `base_link → camera raw optical frames` | Measured rigid extrinsics | Localization / calibration owners |
 | `raw optical → rectified optical` | Rotation derived from saved rectification R, not assumed identity | Localization / calibration owners |
 
-These planned interfaces have no live publishers in this scaffold. `PointStamped` depth must be converted into an appropriate filter measurement and vertical sign/frame by the localization owner; it is not directly a standard robot_localization input. Raw magnetic field also needs calibration/heading processing, not direct insertion as yaw. This contract intentionally does not claim IMU+pressure alone observes absolute X/Y.
+`PointStamped` depth must be converted into an appropriate filter measurement and vertical sign/frame by the localization owner; it is not directly a standard robot_localization input. Raw magnetic field also needs calibration/heading processing, not direct insertion as yaw. This contract intentionally does not claim IMU+pressure alone observes absolute X/Y.

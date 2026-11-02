@@ -1,7 +1,7 @@
 ---
-name: Node work
-about: Assign and validate one P&L node-role deliverable
-title: "[Node] "
+name: Component work
+about: Assign and validate one P&L component deliverable
+title: "[Component] "
 ---
 
 ## Owner and folder
@@ -11,7 +11,7 @@ Folder:
 
 ## Deliverable
 
-<!-- Read the node folder README. List scripts/config/model integration expected. -->
+<!-- Read the component folder README. List scripts/config/model integration expected. -->
 
 ## Interfaces agreed with other owners
 
@@ -22,7 +22,7 @@ Folder:
 
 ## Acceptance evidence
 
-- [ ] Unit or recorded-data checks
+- [ ] Simulation or recorded-data validation
 - [ ] ROS 2 Jazzy package build and interface check
 - [ ] Hardware / pool validation where applicable
 - [ ] Measured uncertainty, bias and limitations documented

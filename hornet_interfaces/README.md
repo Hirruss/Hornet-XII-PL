@@ -1,4 +1,4 @@
-# Shared interface package — implemented, no runtime node
+# Shared interface package , no runtime node
 
 `hornet_interfaces` uses ament_cmake/rosidl to generate three message types: `StereoObservation`, `ObjectPosition`, and `SourceSelection`. The calibration/depth packages otherwise use Python. The messages define typed contracts so members can work independently.
 

@@ -7,7 +7,7 @@
 <text x="165.0" y="314" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#000000">Front camera</text>
 <text x="165.0" y="349" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#000000">Side-by-side stereo</text>
 <rect x="340" y="270" width="250" height="110" rx="18" fill="#ffffff" stroke="#000000" stroke-width="2"/>
-<text x="465.0" y="314" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#000000">Calibration</text>
+<text x="465.0" y="314" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#000000">Front calibration</text>
 <text x="465.0" y="349" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#000000">Split + rectify</text>
 <rect x="730" y="210" width="270" height="110" rx="18" fill="#ffffff" stroke="#000000" stroke-width="2"/>
 <text x="865.0" y="254" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#000000">Object detection</text>
@@ -56,10 +56,10 @@
 <text x="50" y="758" text-anchor="start" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="23" font-weight="700" fill="#000000">BOTTOM VISION + LOCALIZATION</text>
 <rect x="50" y="840" width="230" height="110" rx="18" fill="#ffffff" stroke="#000000" stroke-width="2"/>
 <text x="165.0" y="884" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#000000">Bottom camera</text>
-<text x="165.0" y="919" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#000000">Monocular images</text>
+<text x="165.0" y="919" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#000000">Color images</text>
 <rect x="340" y="840" width="250" height="110" rx="18" fill="#ffffff" stroke="#000000" stroke-width="2"/>
-<text x="465.0" y="884" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#000000">Calibration</text>
-<text x="465.0" y="919" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#000000">Mono rectify</text>
+<text x="465.0" y="884" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#000000">Bottom calibration</text>
+<text x="465.0" y="919" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#000000">Color rectification</text>
 <rect x="730" y="750" width="270" height="110" rx="18" fill="#ffffff" stroke="#000000" stroke-width="2"/>
 <text x="865.0" y="794" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#000000">Optical flow</text>
 <text x="865.0" y="829" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#000000">Metric motion + scale</text>
@@ -70,9 +70,9 @@
 <text x="865.0" y="639" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#000000">IMU + depth</text>
 <text x="865.0" y="674" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#000000">Time-aligned sensors</text>
 <rect x="1150" y="780" width="300" height="130" rx="18" fill="#ffffff" stroke="#000000" stroke-width="2"/>
-<text x="1300.0" y="824" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#000000">EKF / localization</text>
-<text x="1300.0" y="859" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#000000">Pose + covariance</text>
-<text x="1300.0" y="888" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#000000">Map / TF authority</text>
+<text x="1300.0" y="824" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#000000">Localization</text>
+<text x="1300.0" y="859" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#000000">EKF + map</text>
+<text x="1300.0" y="888" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#000000">Pose + covariance / TF</text>
 <rect x="1630" y="780" width="310" height="130" rx="18" fill="#ffffff" stroke="#000000" stroke-width="2"/>
 <text x="1785.0" y="824" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#000000">Robot localization</text>
 <text x="1785.0" y="859" text-anchor="middle" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" font-weight="400" fill="#000000">Pose in fixed map</text>

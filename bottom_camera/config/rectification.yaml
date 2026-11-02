@@ -1,0 +1,5 @@
+/**:
+  ros__parameters:
+    input_topic: /bottom/image_raw
+    output_topic: /bottom/image_rect
+    allow_example_calibration: false

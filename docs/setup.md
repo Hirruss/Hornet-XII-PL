@@ -11,47 +11,46 @@ sudo apt install python3-colcon-common-extensions python3-rosdep \
 
 mkdir -p ~/hornet_ws/src
 cd ~/hornet_ws/src
-# Clone the private repository with your normal GitHub credentials.
+# Clone the repository into your workspace.
 git clone https://github.com/Hirrus177013/Hornet-XII-PL.git
 cd ~/hornet_ws
 # Run sudo rosdep init once if rosdep has never been initialized on this machine.
 rosdep update
 rosdep install --from-paths src --ignore-src -r -y
-colcon build --symlink-install --packages-up-to hornet_depth
+colcon build --symlink-install --packages-up-to hornet_depth hornet_bottom_camera
 source install/setup.bash
 ```
 
-`colcon` discovers the three supplied packages directly in this checkout. Do not create a nested workspace inside the repository. The interface package is generated before the Python consumers. YAMLs and launch files are included in the package installation.
+`colcon` discovers the four supplied packages directly in this checkout. Do not create a nested workspace inside the repository. The interface package is generated before the Python consumers. YAMLs and launch files are included in the package installation.
 
 ### Calibrate first
 
-The three YAMLs in `calibration_node/config/examples/` are **synthetic test examples**. Runtime nodes reject them by default. Do not replace the example flag with `false` to make them look measured. Use your own camera calibration or run the included offline tool:
+The YAMLs in `front_camera/config/examples/` and `bottom_camera/config/examples/` are **synthetic geometry examples**. Runtime nodes reject them by default. Do not replace the example flag with `false` to make them look measured. Use your own camera calibration or run the included offline tool:
 
 ```bash
-ros2 run hornet_calibration calibrate_cameras \
-  --mode stereo --left-dir ~/calibration_images/left --right-dir ~/calibration_images/right \
+ros2 run hornet_front_camera calibrate_stereo \
+  --left-dir ~/calibration_images/left --right-dir ~/calibration_images/right \
   --board-cols 9 --board-rows 6 --square-size-m 0.025 \
   --output-dir ~/hornet_calibration/front_run_01
 
-ros2 run hornet_calibration calibrate_cameras \
-  --mode mono --images-dir ~/calibration_images/bottom \
+ros2 run hornet_bottom_camera calibrate_camera \
+  --images-dir ~/calibration_images/bottom \
   --board-cols 9 --board-rows 6 --square-size-m 0.025 \
   --output-dir ~/hornet_calibration/bottom_run_01
 ```
 
-The board settings are examples: measure your actual square size and count **inner corners**. Use matching stereo filenames, synchronized captures, varied board poses, fixed focus, and the deployment capture mode. At least 12 accepted views are required by default. Existing output directories are never overwritten. See the [calibration procedure](../calibration_node/README.md).
+The board settings are examples: measure your actual square size and count **inner corners**. Use matching stereo filenames, synchronized captures, varied board poses, fixed focus, and the deployment capture mode. At least 12 accepted views are required by default. Existing output directories are never overwritten. See the [front procedure](../front_camera/README.md) and [bottom color-camera procedure](../bottom_camera/README.md).
 
 ### Run calibration and depth nodes
 
 Run each command in a separate terminal after sourcing Jazzy and your workspace. These examples require the camera owners' publishers; they do not start drivers.
 
 ```bash
-ros2 launch hornet_calibration rectify.launch.py \
+ros2 launch hornet_front_camera rectify.launch.py \
   left_yaml:="$HOME/hornet_calibration/front_run_01/left.yaml" \
   right_yaml:="$HOME/hornet_calibration/front_run_01/right.yaml"
 
-ros2 launch hornet_calibration rectify.launch.py mode:=bottom_mono \
-  node_name:=bottom_calibration input_topic:=/bottom/image_raw \
+ros2 launch hornet_bottom_camera rectify.launch.py \
   bottom_yaml:="$HOME/hornet_calibration/bottom_run_01/bottom.yaml"
 
 ros2 launch hornet_depth depth.launch.py \

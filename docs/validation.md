@@ -1,14 +1,12 @@
 # Validation and integration handoff
 
-## Automated local checks
+## Simulation and integration scenarios
 
-From the repository root, install `requirements-test.txt`, then run `python3 -m unittest discover -s tests -v`. Tests cover independently projected stereo points, nonidentical principal points, invalid observations, covariance behavior, source hysteresis/fallback, map transformations, example guards, runtime adapters with minimal ROS stubs, and offline calibration from synthetic checkerboard images. Synthetic tests verify implementation behavior, not real vehicle accuracy.
+Use the team's selected simulator or recorded/live inputs to exercise the scenarios below. Keep expected outputs, frame conventions and scene measurements with the integration issue.
 
-To redraw documentation images: install `requirements-diagrams.txt`, then run `python3 tools/draw_diagrams.py`. The editable Mermaid source also records the graph.
+To redraw documentation images: install `requirements-diagrams.txt`, then run `python3 tools/draw_diagrams.py`.
 
-## Required Jazzy checks (not satisfied by non-ROS unit tests)
-
-- [ ] Build `hornet_interfaces`, `hornet_calibration`, `hornet_depth` in a clean Ubuntu 24.04/Jazzy workspace.
+- [ ] Build `hornet_interfaces`, `hornet_front_camera`, `hornet_bottom_camera`, `hornet_depth` in a clean Ubuntu 24.04/Jazzy workspace.
 - [ ] Inspect generated interfaces with `ros2 interface show hornet_interfaces/msg/StereoObservation` and the other two messages.
 - [ ] Run front/bottom rectification with measured YAML; inspect images, timestamps, sizes, optical frames and QoS.
 - [ ] Start depth with real observations; verify class/topic/source/instance/calibration IDs agree.
@@ -38,6 +36,6 @@ rqt_graph
 - [ ] Measure a textured/defined target at several independently known ranges and bearings; log bias, spread and false associations separately.
 - [ ] Estimate pixel uncertainty from held-out labels; check whether predicted stereo uncertainty is calibrated.
 - [ ] Measure localization drift and mounting/rectification errors; account for missing pose uncertainty downstream.
-- [ ] Validate monocular bottom scale/plane assumptions and optical-flow rotation compensation before metric outputs are accepted.
+- [ ] Validate single-camera bottom scale/plane assumptions and optical-flow rotation compensation before metric outputs are accepted.
 
-No ROS installation, physical camera, IMU, pressure sensor, or vehicle localization is assumed by this scaffold. Fill in actual hardware results in the team issue before deployment.
+Record simulator configuration and measured hardware results in the team issue before deployment.
