@@ -6,6 +6,10 @@ This repository organizes the Hornet XII P&L framework into component areas. Eac
 
 Inspired by the modular camera architecture in [Hornet 9](https://github.com/hornetxauv/h9_camera_ws/tree/b2f5b65507e74cbada62e6a44cd9a10d4445c809). This code is newly written for Jazzy and the framework below. It does not copy Hornet 9's machine-specific paths, older launch wiring, model weights, or calibration measurements.
 
+## Overview
+
+![Hornet XII PL system overview](docs/images/system-overview.png)
+
 ## Framework
 
 ![Hornet XII perception and localization architecture](docs/images/framework.png)
