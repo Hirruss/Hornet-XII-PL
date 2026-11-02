@@ -4,7 +4,7 @@ The `.msg` files in `hornet_interfaces/msg/` are the source of truth. Do not rep
 
 ## Images
 
-Image publishers/subscribers use ROS sensor-data QoS: best effort, volatile, depth 5. Rectification preserves the acquisition stamp, publishes `bgr8`, rejects dimensions inconsistent with YAML, and sets the correct rectified optical frame. Front input is **horizontal side-by-side** with equal lens views and no separator. A 320×240 per-lens calibration requires 640×240 combined capture. No automatic image resizing is performed.
+Image publishers/subscribers use ROS sensor-data QoS: best effort, volatile, depth 5. Rectification preserves the acquisition stamp, publishes `bgr8`, rejects dimensions inconsistent with YAML, and sets the correct rectified optical frame. Front input is **horizontal side-by-side** with equal lens views and no separator. A 640×480 per-lens calibration requires 1280×480 combined capture. No automatic image resizing is performed.
 
 | Image | Frame |
 |---|---|
