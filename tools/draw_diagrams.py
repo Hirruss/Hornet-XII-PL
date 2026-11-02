@@ -6,9 +6,9 @@ import math
 from PIL import Image, ImageDraw, ImageFont
 
 OUT = Path(__file__).resolve().parents[1] / 'docs/images'
-COLORS = {'ink': '#18304b', 'muted': '#526880', 'background': '#f6f8fc',
-          'node': '#ece9f8', 'output': '#dceafd',
-          'config': '#fff3ce', 'feedback': '#b56b05', 'line': '#536c88'}
+COLORS = {'ink': '#000000', 'muted': '#000000', 'background': '#ffffff',
+          'node': '#ffffff', 'output': '#ffffff',
+          'config': '#ffffff', 'feedback': '#000000', 'line': '#000000'}
 
 
 class Diagram:
@@ -41,8 +41,8 @@ class Diagram:
 
     def box(self, x, y, width, height, title, subtitle, kind='node'):
         fill = COLORS[kind]
-        self.svg.append(f'<rect x="{x}" y="{y}" width="{width}" height="{height}" rx="18" fill="{fill}" stroke="#aebed0" stroke-width="2"/>')
-        self.draw.rounded_rectangle((x, y, x+width, y+height), radius=18, fill=fill, outline='#aebed0', width=2)
+        self.svg.append(f'<rect x="{x}" y="{y}" width="{width}" height="{height}" rx="18" fill="{fill}" stroke="#000000" stroke-width="2"/>')
+        self.draw.rounded_rectangle((x, y, x+width, y+height), radius=18, fill=fill, outline='#000000', width=2)
         self.text(x+width/2, y+18, title, size=26, bold=True, anchor='center')
         if subtitle:
             self.text(x+width/2, y+59, subtitle, size=20, color='muted', anchor='center')
@@ -76,7 +76,6 @@ class Diagram:
 def framework():
     d=Diagram(2000,1250)
     d.text(50,25,'HORNET XII  /  PERCEPTION & LOCALIZATION',42,True)
-    d.text(50,88,'Purple: processing nodes    Blue: outputs    Yellow: saved configuration    Dashed: YAML reads / feedback',23,color='muted')
     d.text(50,180,'FRONT STEREO',23,True,color='muted')
     d.box(50,270,230,110,'Front camera',['Side-by-side stereo'])
     d.box(340,270,250,110,'Calibration',['Split + rectify'])

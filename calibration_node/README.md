@@ -17,7 +17,7 @@ Two running instances share this one node-role folder. Use unique node names (`f
 
 1. Fix focus/exposure/capture resolution and mount cameras rigidly. Recalibrate if those change. Calibrate in the intended medium/optical housing configuration; validate refraction effects underwater.
 2. Capture varied checkerboard poses covering image corners, distances and tilt. Use physical square size in metres. Stereo left/right captures must show the same board at the same time; save each per-lens pair with the same filename in separate directories.
-3. Run the `calibrate_cameras` commands in the root README with your real inner-corner counts and square size. For imported side-by-side captures, split and label the two halves consistently before calibration.
+3. Run the `calibrate_cameras` commands in [the setup guide](../docs/setup.md) with your real inner-corner counts and square size. For imported side-by-side captures, split and label the two halves consistently before calibration.
 4. The tool calibrates intrinsics, fixes those during stereo extrinsic fitting, and calls `stereoRectify`. It supports horizontal pinhole stereo and pinhole mono; fisheye/vertical stereo is out of scope. It rejects high RMS under the configured gate and refuses an existing output directory.
 5. Archive the generated YAMLs and calibration provenance (camera serials, mode, focus, housing, medium, square dimensions, date). Use new run directories. Check calibration ID agreement in the left/right files.
 6. Check held-out rectified pairs: corresponding features should align horizontally. Check depth at independently measured distances; low RMS alone does not establish correct stereo scale.
